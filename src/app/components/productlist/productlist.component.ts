@@ -18,8 +18,8 @@ export class ProductlistComponent implements OnInit {
     return this.names = ['Ayakkabı', 'Parfüm', 'Yiyecek', 'İçecek'];
   }
 
-  delete(item : string){
-    this.names = this.names.filter(name => name !== item);
+  delete(name : string){
+    this.names = this.names.filter(n => n !== name);
   }
 
   add(item : string){

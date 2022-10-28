@@ -1,13 +1,13 @@
-<ul>
+<ul *ngFor="let name of names">
   <!-- <ul ngFor let-item [ngForOf]="names"> -->
-    <li *ngFor = "let item [of]" >{{ item }}</li>
-    <button (click)="delete(item)" >Delete</button>
+    <li  >{{ name }}</li>
+    <button (click)="delete(name)" >Delete</button>
   <!-- </ul> -->
 </ul>
 
 <form>
   <label for="item">Product Name</label><br>
-  <input type="text" id="item" [(ngModel)]="item" ><br>
+  <input type="text" id="item" name="item"  [(ngModel)]="item" ><br>
 
 
   <button (click)="add(item)">Add</button>
